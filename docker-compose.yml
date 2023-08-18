@@ -1,0 +1,7 @@
+version: '3'
+services:
+  botlogger-test-bot:
+    restart: always
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile

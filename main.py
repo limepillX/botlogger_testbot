@@ -18,14 +18,16 @@ dp.setup_middleware(MessageLogger())
 
 @dp.message_handler(commands='log')
 async def log(message: types.Message):
-    await logger.send_log('Test log message')
-    await message.answer('Log message sent')
+    text = 'Test log message'
+    await logger.send_log(text)
+    await message.answer(f'Log message <b>{text}</b> sent was sent to the botlogger server')
 
 
 @dp.message_handler(commands='error')
 async def error(message: types.Message):
-    await logger.send_error(Exception('Test error message'))
-    await message.answer('Error message sent')
+    example_error = Exception('Test error message')
+    await logger.send_error(example_error)
+    await message.answer(f'Error <b>{example_error}</b> sent was sent to the botlogger server')
 
 
 @dp.message_handler()
