@@ -7,7 +7,7 @@ Babel==2.9.1
 botlogger==0.0.3
 certifi==2023.7.22
 charset-normalizer==3.2.0
-frozenlist==1.4.0
+frozenlist
 idna==3.4
 loguru==0.7.0
 magic-filter==1.0.11
